@@ -1,0 +1,11 @@
+# versions used for the reported runs (Python 3.11.17, CUDA 12.4 driver; full `pip freeze` in backup/env_freeze_and_katago.txt)
+numpy==2.3.5
+scipy==1.17.1
+scikit-learn==1.9.0
+lightgbm==4.7.0
+joblib==1.6.0
+torch==2.6.0
+pandas==2.3.3
+requests==2.34.2
+packaging==26.3
+# KataGo python sources (HumanSL feature extraction) are fetched by scripts/00_setup.sh at a pinned commit

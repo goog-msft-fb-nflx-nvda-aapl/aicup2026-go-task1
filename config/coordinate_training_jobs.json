@@ -1,0 +1,46 @@
+[
+  {
+    "gpu": 0,
+    "tag": "cx40_lm4_noaug_all",
+    "command": "/home/jtan/solardefect/codex_20261028/venv/bin/python -u /home/jtan/solardefect/go_20261113/reproduction/experiments_1119/src/train_idft_crosscolour_1119.py cx40_lm4_noaug_all --init lm4 --epochs 4 --lr .0001 --s 20 --m 0.1 --seed 0 --allp 1 --aug 0",
+    "allp": 1,
+    "selected_epoch": 2,
+    "source": "/home/jtan/solardefect/go_20261113/reproduction/experiments_1119/src/train_idft_crosscolour_1119.py",
+    "training_log": "/home/jtan/solardefect/go_20261113/logs/cx40_lm4_noaug_all.log",
+    "done": "/home/jtan/solardefect/go_20261113/logs/cx40_lm4_noaug_all.done",
+    "state": "launched"
+  },
+  {
+    "gpu": 1,
+    "tag": "cx41_lm4_pair_hold",
+    "command": "/home/jtan/solardefect/codex_20261028/venv/bin/python -u /home/jtan/solardefect/go_20261113/reproduction/experiments_1119/src/train_idft_crosscolour_1119.py cx41_lm4_pair_hold --init lm4 --epochs 4 --lr .0001 --s 20 --m 0.1 --seed 0 --allp 0 --aug 0 --paired --contrastive-weight 0",
+    "allp": 0,
+    "selected_epoch": null,
+    "source": "/home/jtan/solardefect/go_20261113/reproduction/experiments_1119/src/train_idft_crosscolour_1119.py",
+    "training_log": "/home/jtan/solardefect/go_20261113/logs/cx41_lm4_pair_hold.log",
+    "done": "/home/jtan/solardefect/go_20261113/logs/cx41_lm4_pair_hold.done",
+    "state": "launched"
+  },
+  {
+    "gpu": 2,
+    "tag": "cx42_lm4_paircon_hold",
+    "command": "/home/jtan/solardefect/codex_20261028/venv/bin/python -u /home/jtan/solardefect/go_20261113/reproduction/experiments_1119/src/train_idft_crosscolour_1119.py cx42_lm4_paircon_hold --init lm4 --epochs 4 --lr .0001 --s 20 --m 0.1 --seed 0 --allp 0 --aug 0 --paired --contrastive-weight 0.1",
+    "allp": 0,
+    "selected_epoch": null,
+    "source": "/home/jtan/solardefect/go_20261113/reproduction/experiments_1119/src/train_idft_crosscolour_1119.py",
+    "training_log": "/home/jtan/solardefect/go_20261113/logs/cx42_lm4_paircon_hold.log",
+    "done": "/home/jtan/solardefect/go_20261113/logs/cx42_lm4_paircon_hold.done",
+    "state": "launched"
+  },
+  {
+    "gpu": 3,
+    "tag": "cx43_lm6_noaug_all",
+    "command": "/home/jtan/solardefect/codex_20261028/venv/bin/python -u /home/jtan/solardefect/go_20261113/reproduction/experiments_1119/src/train_idft_crosscolour_1119.py cx43_lm6_noaug_all --init lm6 --epochs 4 --lr .0001 --s 20 --m 0.05 --seed 0 --allp 1 --aug 0",
+    "allp": 1,
+    "selected_epoch": 3,
+    "source": "/home/jtan/solardefect/go_20261113/reproduction/experiments_1119/src/train_idft_crosscolour_1119.py",
+    "training_log": "/home/jtan/solardefect/go_20261113/logs/cx43_lm6_noaug_all.log",
+    "done": "/home/jtan/solardefect/go_20261113/logs/cx43_lm6_noaug_all.done",
+    "state": "launched"
+  }
+]

@@ -1,0 +1,140 @@
+{
+  "accepted_public_score": 0.872195,
+  "expected_prediction_sha256": "eac2f9120aff4dd74102d08b2cbcc3e2cf9009d976fd80a63890b371deacde26",
+  "verification_scope": "Saved-model MLP and expanded Gaussian inference from frozen coordinate fusion and extracted policy features; original-family predictions inherited from declared parent. Not full raw-data inference.",
+  "organizer_dataset_included": false,
+  "files": [
+    {
+      "path": "reproduction/cx38_candidate_pipeline1118/sub/go19_nover.csv",
+      "role": "cached-parent-predictions",
+      "bytes": 116843,
+      "sha256": "abf65aebd37460b1279dc03177e5755660ff05063099bcae9f778ad21d5a1fa7"
+    },
+    {
+      "path": "reproduction/policy_metric1119/policy_metric.pt",
+      "role": "trained-model",
+      "bytes": 1428356,
+      "sha256": "3574aa6d4ddf296559f7ec901308df2935d29afc3db1ea4e9da524ce1cd836cc"
+    },
+    {
+      "path": "reproduction/policy_expanded_lda1122/policy_lda.npz",
+      "role": "trained-model",
+      "bytes": 229104,
+      "sha256": "4c4abe43ef6c9e6b2b0266ada4a7fee267592a137057339506ac9cedd5a96312"
+    },
+    {
+      "path": "reproduction/policy_test1119/pub2_features.npz",
+      "role": "derived-policy-feature",
+      "bytes": 11481196,
+      "sha256": "0c383296b830d873bef21deabe07acdc785ee4ecfb3bf325b6b89ceb3e27d37a"
+    },
+    {
+      "path": "reproduction/cx38_candidate_pipeline1118/results/Sfinal_review_candidate_pub2.npy",
+      "role": "cached-coordinate-scores-or-ids",
+      "bytes": 1920128,
+      "sha256": "85232551e930a4df5d0f35ddb0dfb1e681c1b285b9b28ab88a4c8963baa705ef"
+    },
+    {
+      "path": "reproduction/cx38_candidate_pipeline1118/results/S_pub2_pids.npy",
+      "role": "cached-coordinate-scores-or-ids",
+      "bytes": 26528,
+      "sha256": "c6a73dfde0ebb810530e822bea2eb01d372ea7d04654fcfd4989d606428c4b5a"
+    },
+    {
+      "path": "reproduction/experiments_1119/runs/cx40_lm4_noaug_all/results/Sfinal_newmember_candidate_pub2.npy",
+      "role": "cached-coordinate-scores-or-ids",
+      "bytes": 1920128,
+      "sha256": "ddd7185a0472fb232d1d8a2cd61d5857c2643877a4c75c42fd56f7e70456faea"
+    },
+    {
+      "path": "reproduction/policy_test1119/priv2_features.npz",
+      "role": "derived-policy-feature",
+      "bytes": 11481391,
+      "sha256": "a1fa2cfb28081c98889e4d144c6f4f4f14e26fe3f9d66652b1ef672d6ecc7c73"
+    },
+    {
+      "path": "reproduction/cx38_candidate_pipeline1118/results/Sfinal_review_candidate_priv2.npy",
+      "role": "cached-coordinate-scores-or-ids",
+      "bytes": 1920128,
+      "sha256": "4df3af09979841c7c93ce65c1f10522284afab7b8346837e54a6b784eed42971"
+    },
+    {
+      "path": "reproduction/cx38_candidate_pipeline1118/results/S_priv2_pids.npy",
+      "role": "cached-coordinate-scores-or-ids",
+      "bytes": 28928,
+      "sha256": "18422c1124e10dc6ddf86a44dce82513f7ef6254c493a13a1630e631accb0187"
+    },
+    {
+      "path": "reproduction/experiments_1119/runs/cx40_lm4_noaug_all/results/Sfinal_newmember_candidate_priv2.npy",
+      "role": "cached-coordinate-scores-or-ids",
+      "bytes": 1920128,
+      "sha256": "8fa857eddc6de6617ac2ffcd3e1c45b456dc73a3521d859d0413bf9663720d25"
+    },
+    {
+      "path": "src/codex_reproduce_best1123.py",
+      "role": "runtime-source",
+      "bytes": 3207,
+      "sha256": "e1349ebb86780f6dff554aeb5ff8ed7d8edc767f557d1a8e6022628b63231662"
+    },
+    {
+      "path": "src/codex_policy_metric_infer1119.py",
+      "role": "runtime-source",
+      "bytes": 4552,
+      "sha256": "4fe1f0f29732d5604a621e37278f6eecfd74510361d5f10f17acd0838dc978d4"
+    },
+    {
+      "path": "src/codex_tomorrow_four1123.py",
+      "role": "runtime-source",
+      "bytes": 11107,
+      "sha256": "defc0701e826761ea1bef78ffc62735d558f770a63e3155c37dbb66fe337b17a"
+    },
+    {
+      "path": "organizer/reproduce.py",
+      "role": "organizer-runtime",
+      "bytes": 2202,
+      "sha256": "103c488f48eee559c8702fe6bc9336441c94c6f93d7865fbfd4ea5b9571eb4c4"
+    },
+    {
+      "path": "organizer/requirements-replay.txt",
+      "role": "organizer-runtime",
+      "bytes": 161,
+      "sha256": "585036435541c64de415e54ce95765e1e5cccae64b26a2ba7891755c0e0d42ed"
+    },
+    {
+      "path": "organizer/check_official_data.py",
+      "role": "organizer-runtime",
+      "bytes": 872,
+      "sha256": "36fe4a8fd9d80786ca08606dc2e7f9d849c5df33fbe6a830f98df12ce075b5ad"
+    },
+    {
+      "path": "reproduction/experiments_1119/runs/cx40_lm4_noaug_all/reproduction/new_member_config.json",
+      "role": "coordinate-model-config",
+      "bytes": 4228,
+      "sha256": "f059e632c67606002eed3d7a0fafde7b777921394b3ab797b362e71035aa0ae6"
+    },
+    {
+      "path": "reproduction/final_four1124/environment.json",
+      "role": "recorded-environment",
+      "bytes": 5333,
+      "sha256": "8e8460564f807214c8f2cc07f9ca245db2db79cab83eafaab79bd5184a192660"
+    },
+    {
+      "path": "reproduction/cleanup1123/official_data_inventory.json",
+      "role": "organizer-data-hashes-only",
+      "bytes": 6045,
+      "sha256": "ac043634b0dabe46f86f2518052d6dbe323bef7614b88078d54e23c2b6944b64"
+    },
+    {
+      "path": "katago/kgsrc/LICENSE",
+      "role": "external-source-license",
+      "bytes": 2616,
+      "sha256": "ead22455d923920cd152546d89e4f415c94d6b580aa109fda3b57a69c57c32e0"
+    },
+    {
+      "path": "reproduction/policy_test1119/KATAGO_NETWORK_LICENSE.txt",
+      "role": "external-network-license",
+      "bytes": 1219,
+      "sha256": "c8e8c103888035d3ffd1ecea1ec183135e9417195cae976c1fcb58a9cffe2f54"
+    }
+  ]
+}

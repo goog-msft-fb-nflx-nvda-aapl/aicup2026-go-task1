@@ -1,0 +1,64 @@
+{
+  "results/lm_lm6.pt": {
+    "tag": "lm6",
+    "epochs": 8,
+    "d": 1280,
+    "layers": 20,
+    "heads": 20,
+    "bs": 128,
+    "lr": 0.0003,
+    "maxlen": 320,
+    "seed": 6,
+    "hold": 800,
+    "noaug": false,
+    "cond_drop": 0.0
+  },
+  "results/ft_ft6_sord8.pt": {
+    "tag": "ft6_sord8",
+    "init": "lm4",
+    "loss": "sord",
+    "tau": 1.0,
+    "epochs": 8,
+    "bs": 128,
+    "lr": 8e-05,
+    "seed": 0,
+    "maxlen": 320,
+    "pool": "both"
+  },
+  "results/ft_ft7_sord8.pt": {
+    "tag": "ft7_sord8",
+    "init": "lm5",
+    "loss": "sord",
+    "tau": 1.5,
+    "epochs": 8,
+    "bs": 128,
+    "lr": 8e-05,
+    "seed": 1,
+    "maxlen": 320,
+    "pool": "both"
+  },
+  "results/ft_ft8_sord8.pt": {
+    "tag": "ft8_sord8",
+    "init": "lm6",
+    "loss": "sord",
+    "tau": 1.0,
+    "epochs": 8,
+    "bs": 128,
+    "lr": 8e-05,
+    "seed": 2,
+    "maxlen": 320,
+    "pool": "both"
+  },
+  "results/ft_ft9_sord8.pt": {
+    "tag": "ft9_sord8",
+    "init": "lm5",
+    "loss": "sord",
+    "tau": 1.0,
+    "epochs": 8,
+    "bs": 128,
+    "lr": 8e-05,
+    "seed": 3,
+    "maxlen": 320,
+    "pool": "both"
+  }
+}

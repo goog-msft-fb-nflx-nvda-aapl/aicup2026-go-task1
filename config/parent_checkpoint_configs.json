@@ -1,0 +1,871 @@
+{
+  "results/lm_lm1.pt": {
+    "args": {
+      "tag": "lm1",
+      "epochs": 4,
+      "d": 384,
+      "layers": 8,
+      "heads": 6,
+      "bs": 128,
+      "lr": 0.0004,
+      "maxlen": 320,
+      "seed": 0,
+      "hold": 800,
+      "noaug": false,
+      "cond_drop": 0.0
+    },
+    "keys": [
+      "net",
+      "args",
+      "hold"
+    ]
+  },
+  "results/lm_lm2.pt": {
+    "args": {
+      "tag": "lm2",
+      "epochs": 8,
+      "d": 512,
+      "layers": 10,
+      "heads": 8,
+      "bs": 128,
+      "lr": 0.0003,
+      "maxlen": 320,
+      "seed": 0,
+      "hold": 800,
+      "noaug": false,
+      "cond_drop": 0.0
+    },
+    "keys": [
+      "net",
+      "args",
+      "hold"
+    ]
+  },
+  "results/lm_lm3.pt": {
+    "args": {
+      "tag": "lm3",
+      "epochs": 8,
+      "d": 768,
+      "layers": 12,
+      "heads": 12,
+      "bs": 96,
+      "lr": 0.00025,
+      "maxlen": 320,
+      "seed": 0,
+      "hold": 800,
+      "noaug": false,
+      "cond_drop": 0.0
+    },
+    "keys": [
+      "net",
+      "args",
+      "hold"
+    ]
+  },
+  "results/lm_lm4.pt": {
+    "args": {
+      "tag": "lm4",
+      "epochs": 8,
+      "d": 1024,
+      "layers": 16,
+      "heads": 16,
+      "bs": 128,
+      "lr": 0.0003,
+      "maxlen": 320,
+      "seed": 4,
+      "hold": 800,
+      "noaug": false,
+      "cond_drop": 0.0
+    },
+    "keys": [
+      "net",
+      "args",
+      "hold"
+    ]
+  },
+  "results/lm_lm5.pt": {
+    "args": {
+      "tag": "lm5",
+      "epochs": 8,
+      "d": 896,
+      "layers": 14,
+      "heads": 14,
+      "bs": 128,
+      "lr": 0.0003,
+      "maxlen": 320,
+      "seed": 5,
+      "hold": 800,
+      "noaug": false,
+      "cond_drop": 0.0
+    },
+    "keys": [
+      "net",
+      "args",
+      "hold"
+    ]
+  },
+  "results/idft_a2.pt": {
+    "args": {
+      "tag": "a2",
+      "init": "lm3",
+      "epochs": 2,
+      "bs": 128,
+      "lr": 5e-05,
+      "maxlen": 320,
+      "s": 20.0,
+      "m": 0.05,
+      "seed": 0
+    },
+    "keys": [
+      "net",
+      "args"
+    ]
+  },
+  "results/idft_b1.pt": {
+    "args": {
+      "tag": "b1",
+      "init": "lm3",
+      "epochs": 4,
+      "bs": 128,
+      "lr": 0.0001,
+      "maxlen": 320,
+      "s": 20.0,
+      "m": 0.1,
+      "seed": 0
+    },
+    "keys": [
+      "net",
+      "args"
+    ]
+  },
+  "results/idft_b2.pt": {
+    "args": {
+      "tag": "b2",
+      "init": "lm2",
+      "epochs": 4,
+      "bs": 128,
+      "lr": 5e-05,
+      "maxlen": 320,
+      "s": 20.0,
+      "m": 0.05,
+      "seed": 1
+    },
+    "keys": [
+      "net",
+      "args"
+    ]
+  },
+  "results/idft_b3.pt": {
+    "args": {
+      "tag": "b3",
+      "init": "lm1",
+      "epochs": 4,
+      "bs": 128,
+      "lr": 5e-05,
+      "maxlen": 320,
+      "s": 20.0,
+      "m": 0.05,
+      "seed": 2
+    },
+    "keys": [
+      "net",
+      "args"
+    ]
+  },
+  "results/idft_c1.pt": {
+    "args": {
+      "tag": "c1",
+      "init": "lm3",
+      "epochs": 6,
+      "bs": 128,
+      "lr": 0.0001,
+      "maxlen": 320,
+      "s": 20.0,
+      "m": 0.1,
+      "seed": 5,
+      "allp": 1
+    },
+    "keys": [
+      "net",
+      "args"
+    ]
+  },
+  "results/idft_c2.pt": {
+    "args": {
+      "tag": "c2",
+      "init": "lm2",
+      "epochs": 6,
+      "bs": 128,
+      "lr": 5e-05,
+      "maxlen": 320,
+      "s": 20.0,
+      "m": 0.05,
+      "seed": 6,
+      "allp": 1
+    },
+    "keys": [
+      "net",
+      "args"
+    ]
+  },
+  "results/idft_c3.pt": {
+    "args": {
+      "tag": "c3",
+      "init": "lm3",
+      "epochs": 6,
+      "bs": 128,
+      "lr": 5e-05,
+      "maxlen": 320,
+      "s": 20.0,
+      "m": 0.05,
+      "seed": 7,
+      "allp": 1
+    },
+    "keys": [
+      "net",
+      "args"
+    ]
+  },
+  "results/idft_c4.pt": {
+    "args": {
+      "tag": "c4",
+      "init": "lm3",
+      "epochs": 10,
+      "bs": 128,
+      "lr": 0.0001,
+      "maxlen": 320,
+      "s": 20.0,
+      "m": 0.1,
+      "seed": 21,
+      "allp": 1
+    },
+    "keys": [
+      "net",
+      "args"
+    ]
+  },
+  "results/idft_c5.pt": {
+    "args": {
+      "tag": "c5",
+      "init": "lm2",
+      "epochs": 8,
+      "bs": 128,
+      "lr": 0.0001,
+      "maxlen": 320,
+      "s": 20.0,
+      "m": 0.1,
+      "seed": 22,
+      "allp": 1
+    },
+    "keys": [
+      "net",
+      "args"
+    ]
+  },
+  "results/idft_c6.pt": {
+    "args": {
+      "tag": "c6",
+      "init": "lm3",
+      "epochs": 8,
+      "bs": 128,
+      "lr": 0.0001,
+      "maxlen": 320,
+      "s": 24.0,
+      "m": 0.1,
+      "seed": 31,
+      "allp": 1
+    },
+    "keys": [
+      "net",
+      "args"
+    ]
+  },
+  "results/idft_c7.pt": {
+    "args": {
+      "tag": "c7",
+      "init": "lm1",
+      "epochs": 8,
+      "bs": 128,
+      "lr": 0.0001,
+      "maxlen": 320,
+      "s": 20.0,
+      "m": 0.1,
+      "seed": 41,
+      "allp": 1
+    },
+    "keys": [
+      "net",
+      "args"
+    ]
+  },
+  "results/idft_c8.pt": {
+    "args": {
+      "tag": "c8",
+      "init": "lm2",
+      "epochs": 10,
+      "bs": 128,
+      "lr": 0.00015,
+      "maxlen": 320,
+      "s": 20.0,
+      "m": 0.1,
+      "seed": 42,
+      "allp": 1
+    },
+    "keys": [
+      "net",
+      "args"
+    ]
+  },
+  "results/idft_c9.pt": {
+    "args": {
+      "tag": "c9",
+      "init": "lm2",
+      "epochs": 12,
+      "bs": 128,
+      "lr": 0.0002,
+      "maxlen": 320,
+      "s": 20.0,
+      "m": 0.1,
+      "seed": 61,
+      "allp": 1
+    },
+    "keys": [
+      "net",
+      "args"
+    ]
+  },
+  "results/idft_c10.pt": {
+    "args": {
+      "tag": "c10",
+      "init": "lm3",
+      "epochs": 10,
+      "bs": 128,
+      "lr": 0.00015,
+      "maxlen": 320,
+      "s": 20.0,
+      "m": 0.1,
+      "seed": 62,
+      "allp": 1
+    },
+    "keys": [
+      "net",
+      "args"
+    ]
+  },
+  "results/idft_c11.pt": {
+    "args": {
+      "tag": "c11",
+      "init": "lm2",
+      "epochs": 10,
+      "bs": 128,
+      "lr": 0.00015,
+      "maxlen": 320,
+      "s": 20.0,
+      "m": 0.1,
+      "seed": 91,
+      "allp": 1
+    },
+    "keys": [
+      "net",
+      "args"
+    ]
+  },
+  "results/idft_c12.pt": {
+    "args": {
+      "tag": "c12",
+      "init": "lm3",
+      "epochs": 10,
+      "bs": 128,
+      "lr": 0.0001,
+      "maxlen": 320,
+      "s": 20.0,
+      "m": 0.05,
+      "seed": 92,
+      "allp": 1
+    },
+    "keys": [
+      "net",
+      "args"
+    ]
+  },
+  "results/idft_c13.pt": {
+    "args": {
+      "tag": "c13",
+      "init": "lm3",
+      "epochs": 10,
+      "bs": 128,
+      "lr": 0.00015,
+      "maxlen": 320,
+      "s": 20.0,
+      "m": 0.1,
+      "seed": 101,
+      "allp": 1
+    },
+    "keys": [
+      "net",
+      "args"
+    ]
+  },
+  "results/idft_c14.pt": {
+    "args": {
+      "tag": "c14",
+      "init": "lm2",
+      "epochs": 10,
+      "bs": 128,
+      "lr": 0.00015,
+      "maxlen": 320,
+      "s": 20.0,
+      "m": 0.1,
+      "seed": 102,
+      "allp": 1
+    },
+    "keys": [
+      "net",
+      "args"
+    ]
+  },
+  "results/idft_c15.pt": {
+    "args": {
+      "tag": "c15",
+      "init": "lm3",
+      "epochs": 10,
+      "bs": 128,
+      "lr": 0.0002,
+      "maxlen": 320,
+      "s": 20.0,
+      "m": 0.1,
+      "seed": 103,
+      "allp": 1
+    },
+    "keys": [
+      "net",
+      "args"
+    ]
+  },
+  "results/idft_c16.pt": {
+    "args": {
+      "tag": "c16",
+      "init": "lm3",
+      "epochs": 10,
+      "bs": 128,
+      "lr": 0.0001,
+      "maxlen": 320,
+      "s": 20.0,
+      "m": 0.05,
+      "seed": 104,
+      "allp": 1
+    },
+    "keys": [
+      "net",
+      "args"
+    ]
+  },
+  "results/idft_c17.pt": {
+    "args": {
+      "tag": "c17",
+      "init": "lm3",
+      "epochs": 10,
+      "bs": 128,
+      "lr": 0.00015,
+      "maxlen": 320,
+      "s": 20.0,
+      "m": 0.1,
+      "seed": 105,
+      "allp": 1
+    },
+    "keys": [
+      "net",
+      "args"
+    ]
+  },
+  "results/idft_c18.pt": {
+    "args": {
+      "tag": "c18",
+      "init": "lm3",
+      "epochs": 10,
+      "bs": 128,
+      "lr": 0.0001,
+      "maxlen": 320,
+      "s": 20.0,
+      "m": 0.05,
+      "seed": 106,
+      "allp": 1
+    },
+    "keys": [
+      "net",
+      "args"
+    ]
+  },
+  "results/idft_c19.pt": {
+    "args": {
+      "tag": "c19",
+      "init": "lm5",
+      "epochs": 10,
+      "bs": 128,
+      "lr": 0.00015,
+      "maxlen": 320,
+      "s": 20.0,
+      "m": 0.1,
+      "seed": 107,
+      "allp": 1
+    },
+    "keys": [
+      "net",
+      "args"
+    ]
+  },
+  "results/idft_c20.pt": {
+    "args": {
+      "tag": "c20",
+      "init": "lm4",
+      "epochs": 10,
+      "bs": 128,
+      "lr": 0.00015,
+      "maxlen": 320,
+      "s": 20.0,
+      "m": 0.1,
+      "seed": 108,
+      "allp": 1
+    },
+    "keys": [
+      "net",
+      "args"
+    ]
+  },
+  "results/idft_c21.pt": {
+    "args": {
+      "tag": "c21",
+      "init": "lm4",
+      "epochs": 10,
+      "bs": 128,
+      "lr": 0.00015,
+      "maxlen": 320,
+      "s": 20.0,
+      "m": 0.1,
+      "seed": 109,
+      "allp": 1
+    },
+    "keys": [
+      "net",
+      "args"
+    ]
+  },
+  "results/idft_c22.pt": {
+    "args": {
+      "tag": "c22",
+      "init": "lm4",
+      "epochs": 10,
+      "bs": 128,
+      "lr": 0.0001,
+      "maxlen": 320,
+      "s": 20.0,
+      "m": 0.05,
+      "seed": 110,
+      "allp": 1
+    },
+    "keys": [
+      "net",
+      "args"
+    ]
+  },
+  "results/idft_c23.pt": {
+    "args": {
+      "tag": "c23",
+      "init": "lm4",
+      "epochs": 10,
+      "bs": 128,
+      "lr": 0.00015,
+      "maxlen": 320,
+      "s": 20.0,
+      "m": 0.1,
+      "seed": 111,
+      "allp": 1
+    },
+    "keys": [
+      "net",
+      "args"
+    ]
+  },
+  "results/idft_c24.pt": {
+    "args": {
+      "tag": "c24",
+      "init": "lm4",
+      "epochs": 10,
+      "bs": 128,
+      "lr": 0.0001,
+      "maxlen": 320,
+      "s": 20.0,
+      "m": 0.05,
+      "seed": 112,
+      "allp": 1
+    },
+    "keys": [
+      "net",
+      "args"
+    ]
+  },
+  "results/idft_c25.pt": {
+    "args": {
+      "tag": "c25",
+      "init": "lm4",
+      "epochs": 10,
+      "bs": 128,
+      "lr": 0.00015,
+      "maxlen": 320,
+      "s": 20.0,
+      "m": 0.1,
+      "seed": 113,
+      "allp": 1
+    },
+    "keys": [
+      "net",
+      "args"
+    ]
+  },
+  "results/idft_c26.pt": {
+    "args": {
+      "tag": "c26",
+      "init": "lm5",
+      "epochs": 10,
+      "bs": 128,
+      "lr": 0.0001,
+      "maxlen": 320,
+      "s": 20.0,
+      "m": 0.05,
+      "seed": 114,
+      "allp": 1
+    },
+    "keys": [
+      "net",
+      "args"
+    ]
+  },
+  "results/idft_c33.pt": {
+    "args": {
+      "tag": "c33",
+      "init": "lm4",
+      "epochs": 10,
+      "bs": 128,
+      "lr": 0.0001,
+      "maxlen": 320,
+      "s": 20.0,
+      "m": 0.05,
+      "seed": 121,
+      "allp": 1
+    },
+    "keys": [
+      "net",
+      "args"
+    ]
+  },
+  "results/idft_c34.pt": {
+    "args": {
+      "tag": "c34",
+      "init": "lm4",
+      "epochs": 10,
+      "bs": 128,
+      "lr": 0.00015,
+      "maxlen": 320,
+      "s": 20.0,
+      "m": 0.1,
+      "seed": 122,
+      "allp": 1
+    },
+    "keys": [
+      "net",
+      "args"
+    ]
+  },
+  "results/idft_h4.pt": {
+    "args": {
+      "tag": "h4",
+      "init": "lm4",
+      "epochs": 4,
+      "bs": 128,
+      "lr": 0.0001,
+      "maxlen": 320,
+      "s": 20.0,
+      "m": 0.1,
+      "seed": 0,
+      "allp": 0
+    },
+    "keys": [
+      "net",
+      "args"
+    ]
+  },
+  "results/idft_h5.pt": {
+    "args": {
+      "tag": "h5",
+      "init": "lm5",
+      "epochs": 4,
+      "bs": 128,
+      "lr": 0.0001,
+      "maxlen": 320,
+      "s": 20.0,
+      "m": 0.1,
+      "seed": 0,
+      "allp": 0
+    },
+    "keys": [
+      "net",
+      "args"
+    ]
+  },
+  "results/ft_ft4_sord8.pt": {
+    "args": {
+      "tag": "ft4_sord8",
+      "init": "lm3",
+      "loss": "sord",
+      "tau": 1.0,
+      "epochs": 8,
+      "bs": 128,
+      "lr": 8e-05,
+      "seed": 0,
+      "maxlen": 320,
+      "pool": "both"
+    },
+    "keys": [
+      "net",
+      "args"
+    ]
+  },
+  "results/ft_ft5_sord8.pt": {
+    "args": {
+      "tag": "ft5_sord8",
+      "init": "lm3",
+      "loss": "sord",
+      "tau": 1.5,
+      "epochs": 8,
+      "bs": 128,
+      "lr": 8e-05,
+      "seed": 1,
+      "maxlen": 320,
+      "pool": "both"
+    },
+    "keys": [
+      "net",
+      "args"
+    ]
+  },
+  "results/id_mlp1000_6_2048_0.2_0.3_0.1_11.pt": {
+    "args": null,
+    "keys": [
+      "net",
+      "mu",
+      "sd"
+    ]
+  },
+  "results/id_mlp1000_6_2048_0.2_0.3_0.1_12.pt": {
+    "args": null,
+    "keys": [
+      "net",
+      "mu",
+      "sd"
+    ]
+  },
+  "results/id_mlp1000_6_2048_0.2_0.3_0.1_13.pt": {
+    "args": null,
+    "keys": [
+      "net",
+      "mu",
+      "sd"
+    ]
+  },
+  "results/id_mlp1000_6_2048_0.2_0.3_0.1_14.pt": {
+    "args": null,
+    "keys": [
+      "net",
+      "mu",
+      "sd"
+    ]
+  },
+  "results/id_mlp1000_6_2048_0.2_0.3_0.1_15.pt": {
+    "args": null,
+    "keys": [
+      "net",
+      "mu",
+      "sd"
+    ]
+  },
+  "results/id_mlp1000_6_2048_0.2_0.3_0.1_16.pt": {
+    "args": null,
+    "keys": [
+      "net",
+      "mu",
+      "sd"
+    ]
+  },
+  "results/id_mlp1024_12_1024_0.2_0.3_0.1_1.pt": {
+    "args": null,
+    "keys": [
+      "net",
+      "mu",
+      "sd"
+    ]
+  },
+  "results/id_mlp1024_8_1024_0.2_0.2_0.05_0.pt": {
+    "args": null,
+    "keys": [
+      "net",
+      "mu",
+      "sd"
+    ]
+  },
+  "results/id_mlp1024_8_2048_0.3_0.3_0.1_0.pt": {
+    "args": null,
+    "keys": [
+      "net",
+      "mu",
+      "sd"
+    ]
+  },
+  "results/id_mlp768_12_1024_0.2_0.3_0.1_1.pt": {
+    "args": null,
+    "keys": [
+      "net",
+      "mu",
+      "sd"
+    ]
+  },
+  "results/id_mlp768_12_2048_0.2_0.3_0.1_2.pt": {
+    "args": null,
+    "keys": [
+      "net",
+      "mu",
+      "sd"
+    ]
+  },
+  "results/id_mlp768_8_1024_0.2_0.2_0.05_0.pt": {
+    "args": null,
+    "keys": [
+      "net",
+      "mu",
+      "sd"
+    ]
+  },
+  "results/id_mlp1536_12_1024_0.2_0.3_0.1_1.pt": {
+    "args": null,
+    "keys": [
+      "net",
+      "mu",
+      "sd"
+    ]
+  },
+  "results/id_mlp1536_12_2048_0.2_0.3_0.1_2.pt": {
+    "args": null,
+    "keys": [
+      "net",
+      "mu",
+      "sd"
+    ]
+  },
+  "results/id_mlp1536_8_1024_0.2_0.2_0.05_0.pt": {
+    "args": null,
+    "keys": [
+      "net",
+      "mu",
+      "sd"
+    ]
+  }
+}

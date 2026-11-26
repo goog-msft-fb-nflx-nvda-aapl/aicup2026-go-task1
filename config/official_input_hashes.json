@@ -1,0 +1,167 @@
+{
+  "root": "/home/jtan/solardefect/go_20261113",
+  "files": [
+    {
+      "path": "data/train.tar.xz",
+      "bytes": 220710452,
+      "sha256": "e0880a3e8723f776e931ecce7fbc09eace9a0dd42b18a1d8ebac4a1628d2395e"
+    },
+    {
+      "path": "data/train_arr.npz",
+      "bytes": 1209001668,
+      "sha256": "c8950d05ed91a423e6e0e091afaa663e2add25f7dbab93d74d7ac52851c25a77"
+    },
+    {
+      "path": "data/training/train_C.csv",
+      "bytes": 141054668,
+      "sha256": "4e10a420fae0b0e03f1574e3c7cd0e63731ddf2719e5f135889ff81a95b53e6d"
+    },
+    {
+      "path": "data/training/train_B.csv",
+      "bytes": 140652464,
+      "sha256": "77f8042c60e6e193364f0dab99c816bf65fa8b3d478cda6cf4d55ae304c485a6"
+    },
+    {
+      "path": "data/training/train_2D.csv",
+      "bytes": 137766630,
+      "sha256": "950864405342dd5e58107e7daa4aeb3cec17e3aa821034d83fc1668410e6dca9"
+    },
+    {
+      "path": "data/training/train_D.csv",
+      "bytes": 141401228,
+      "sha256": "4f2fab08929bae7fd6a142044a2ba98d093df17f1e7ca7834ab52ec721f3df78"
+    },
+    {
+      "path": "data/training/train_4D.csv",
+      "bytes": 135321612,
+      "sha256": "2c18fbaceb6fc0bb971d99942a1379020224f3924de744edb50e26e004653372"
+    },
+    {
+      "path": "data/training/train_3D.csv",
+      "bytes": 135736356,
+      "sha256": "6f832c44d04a167b1458ab3c9c3a0625adcf37d656ca540b4e758039d7057a4d"
+    },
+    {
+      "path": "data/training/train_5D.csv",
+      "bytes": 135913572,
+      "sha256": "3efd1ade4d93f8b344b5cf67517ca83cf3e22f8c6efce2ffe472cf10d00aadd5"
+    },
+    {
+      "path": "data/training/train_1D.csv",
+      "bytes": 139173714,
+      "sha256": "33c405a0a51b1e57dcb25a597585141dfccb5508c2e4635ac654174729fed1f8"
+    },
+    {
+      "path": "data/training/train_6D.csv",
+      "bytes": 132914598,
+      "sha256": "a90e226f22319cf37a305668e668914ab99ff9bf5a7d8b16b17a0892e474963d"
+    },
+    {
+      "path": "data/training/train_A.csv",
+      "bytes": 139029626,
+      "sha256": "4f95c02cac49fc913b113a5250d2722c242e54145c9432d7d82f50cc9d8df47d"
+    },
+    {
+      "path": "data/tests1/tests/player_identification_test_private.csv",
+      "bytes": 6756005,
+      "sha256": "eedd2630731070633dfa264897ac739aec03879f90ac57149bba033d9bd53dee"
+    },
+    {
+      "path": "data/tests1/tests/sample_submission_player.csv",
+      "bytes": 56043,
+      "sha256": "27dee3b9d447d62d03f136cd18d30953f3cb8821aeba399544e9d4eb782b355c"
+    },
+    {
+      "path": "data/tests1/tests/README_player_identification.md",
+      "bytes": 2551,
+      "sha256": "ffc8b55ce68b34893d18106be07a61ed0d403e2406b25e878f606c101464f2c2"
+    },
+    {
+      "path": "data/tests1/tests/player_identification_candidates_public.csv",
+      "bytes": 54956081,
+      "sha256": "e662242cb0f0b2be2009c129abd291c9c852af7fae25d8f1e1c00208785ee24d"
+    },
+    {
+      "path": "data/tests1/tests/player_identification_candidates_private.csv",
+      "bytes": 55008481,
+      "sha256": "db2cfe33be9c1e36355fac5664b758909ef80bce1be257e55bae056fba40d963"
+    },
+    {
+      "path": "data/tests1/tests/player_identification_test_public.csv",
+      "bytes": 6705235,
+      "sha256": "fbf6f14de57bc37bbec6e3d732143a2561887d37b1f36271223ad1a14810ac74"
+    },
+    {
+      "path": "data/tests1v2/tests/player_identification_test_private.csv",
+      "bytes": 6756005,
+      "sha256": "eedd2630731070633dfa264897ac739aec03879f90ac57149bba033d9bd53dee"
+    },
+    {
+      "path": "data/tests1v2/tests/sample_submission_player_v2.csv",
+      "bytes": 116843,
+      "sha256": "70bf0e3cd31ce8aa0ad438c576f77b3f8c0ca3a49a8089bd026108ad3ba26c9c"
+    },
+    {
+      "path": "data/tests1v2/tests/player_identification_candidates_public.csv",
+      "bytes": 54956081,
+      "sha256": "e662242cb0f0b2be2009c129abd291c9c852af7fae25d8f1e1c00208785ee24d"
+    },
+    {
+      "path": "data/tests1v2/tests/player_identification_candidates_private.csv",
+      "bytes": 55008481,
+      "sha256": "db2cfe33be9c1e36355fac5664b758909ef80bce1be257e55bae056fba40d963"
+    },
+    {
+      "path": "data/tests1v2/tests/player_identification_test_public.csv",
+      "bytes": 6705235,
+      "sha256": "fbf6f14de57bc37bbec6e3d732143a2561887d37b1f36271223ad1a14810ac74"
+    },
+    {
+      "path": "data/tests1v2/tests/README_player_identification_v2.md",
+      "bytes": 4291,
+      "sha256": "c0bdf850a03a0536102582e801119e64978adb36129fbdcbaf307148c531c97b"
+    },
+    {
+      "path": "data/tests1v2/tests/player_identification_test2_public.csv",
+      "bytes": 1468253,
+      "sha256": "33485b58da29a43d53526f9f83d92ebdc4610948cb0f5249e07bba5cbdd53d6a"
+    },
+    {
+      "path": "data/tests1v2/tests/player_identification_candidates2_public.csv",
+      "bytes": 8114857,
+      "sha256": "ac3d7d20d1a19ee7e670638b556f5c3cc021904ca4e1644bc0d0bcec4ff6616d"
+    },
+    {
+      "path": "data/tests1v2/tests/player_identification_candidates2_private.csv",
+      "bytes": 8210305,
+      "sha256": "8e80f94689284722bd21a3f3306c476ee78aead60a4061e74a0f8aaaede36812"
+    },
+    {
+      "path": "data/tests1v2/tests/player_identification_test2_private.csv",
+      "bytes": 1481715,
+      "sha256": "52e01bcc508e3e350f47b6430a7c841531976ac4a9d294fc2328b4570ca8a527"
+    },
+    {
+      "path": "data/tests2/tests/rank_prediction_test_private.csv",
+      "bytes": 6752165,
+      "sha256": "d59865e24fe2f5ad742db68108a7f59c2e41138f18c4dc2eea1aa364f3e73c73"
+    },
+    {
+      "path": "data/tests2/tests/README_rank_prediction.md",
+      "bytes": 1778,
+      "sha256": "9a095caa8bed3881a0850d878003afc3cae31dc93ecb8b8900ee37dc33e0524e"
+    },
+    {
+      "path": "data/tests2/tests/rank_prediction_test_public.csv",
+      "bytes": 6775591,
+      "sha256": "4691803a8306ccd65d93a90bd6d7ba767d57abe96c0660b262f1a2b756b84fef"
+    },
+    {
+      "path": "data/tests2/tests/sample_submission_rank.csv",
+      "bytes": 12423,
+      "sha256": "aa5016dbc04d7c64860e1b8727d2c2fa0b19a28a481fd3c674f82ed36f68ed16"
+    }
+  ],
+  "total_bytes": 3088525007,
+  "backup_policy": "Organizer-provided data and regenerable train_arr cache are NOT backed up, per user instruction."
+}
