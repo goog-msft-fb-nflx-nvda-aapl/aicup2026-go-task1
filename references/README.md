@@ -1,3 +1,5 @@
+> Current organizer instructions: [REPRODUCE.md](../REPRODUCE.md), version reproduction-20261127. All experiment-specific guides below are historical; their former private access arrangements are superseded by the public weight manifest.
+
 # Frozen upstream references
 
 These are provenance copies from the private competition source. They describe dated stages of the model lineage. Paths such as `src/`, `scripts/`, `results/` and `reproduction/` refer to the restored competition workspace, not this report directory.

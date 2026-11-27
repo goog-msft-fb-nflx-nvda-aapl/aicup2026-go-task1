@@ -28,7 +28,7 @@ Download without logging in: [trained-weights-20261127](https://github.com/goog-
 
 ## Running
 
-Place the organizer-provided files as shown in `REPRODUCE.md`, verify them with `python tools/check_official_data.py --root /absolute/project --inventory config/official_input_hashes.json`, and use the documented training/extraction commands. To verify the archived compact replay, install `requirements/requirements-replay.txt`, obtain the authorized archive and run `python tools/reproduce.py --archive /path/to/archive.tar.gz --workspace /path/to/empty-workspace`.
+Use [REPRODUCE.md](REPRODUCE.md), version `reproduction-20261127`, and the shared command/model contract in `config/reproduction_contract.json`. The report's reproduction section is mirrored in `REPORT_REPRODUCTION.md`. Download and restore fitted models with `tools/download_weights.py` and `tools/restore_weights.py`; training is not required. Official CSV placement and partial component commands are listed in that guide. A complete exact original-data inference command is not yet certified. Historical training and saved-output replay instructions are clearly separated under `references/`.
 
 ## Attribution and assistance
 

@@ -14,11 +14,11 @@ No extra raw Go dataset was introduced for the accepted policy experiments. The 
 
 ## Software and methods
 
-PyTorch supplies Transformer/MLP training and inference; NumPy/SciPy supply dense/sparse linear algebra; scikit-learn and joblib support legacy SVD/MLP feature processing and serialization; LightGBM supports historical gate/verifier components. The final new-pool path removes the last LambdaRank verifier. Exact installed versions are recorded in `evidence/final_candidates_environment.json`; source pins and notices remain authoritative. Transformer and ArcFace ideas are attributed to their papers in the report.
+PyTorch supplies Transformer/MLP training and inference; NumPy/SciPy supply dense/sparse linear algebra; scikit-learn and joblib support legacy SVD/MLP feature processing and serialization; LightGBM supports historical gate/verifier components. The final new-pool path removes the last LambdaRank verifier. Exact installed versions are recorded in `requirements/requirements-training-recorded.txt`; source pins and notices remain authoritative. Transformer and ArcFace ideas are attributed to their papers in the report.
 
 ## Generative AI disclosure
 
-Claude Code and OpenAI Codex assisted implementation, debugging, experiment execution, analysis and drafting. ChatGPT and Gemini were also used for research synthesis and experiment suggestions in the project workflow. TAN, CHUN-FEI directed the objective and experimental priorities and is responsible for reviewing the report and submission. Assistance is disclosed; no claim of unaided authorship is made. The team must verify the precise official contribution statement before final submission.
+Claude Code and OpenAI Codex assisted implementation, debugging, experiment execution, analysis and drafting. ChatGPT and Gemini were also used for research synthesis and experiment suggestions in the project workflow. TAN, CHUN-FEI directed the objective and experimental priorities and is responsible for reviewing the report and submission. Assistance is disclosed; no claim of unaided authorship is made. The report records the contribution statement.
 
 ## Official disclosure guidance
 
