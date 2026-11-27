@@ -1,0 +1,188 @@
+{
+  "release_url": "https://github.com/goog-msft-fb-nflx-nvda-aapl/aicup2026-go-task1/releases/tag/trained-weights-20261127",
+  "download_base": "https://github.com/goog-msft-fb-nflx-nvda-aapl/aicup2026-go-task1/releases/download/trained-weights-20261127/",
+  "publication_status": "in_progress",
+  "assets": [
+    {
+      "name": "humanv0.ckpt",
+      "bytes": 323752318,
+      "sha256": "84b23476b56a73a775a0f09bad7d1c5c435690adb343aa851e80bf198c0c8b27",
+      "restore_path": "katago/humanv0.ckpt"
+    },
+    {
+      "name": "KATAGO_NETWORK_LICENSE.txt",
+      "bytes": 1219,
+      "sha256": "c8e8c103888035d3ffd1ecea1ec183135e9417195cae976c1fcb58a9cffe2f54"
+    },
+    {
+      "name": "idft_cx40_lm4_noaug_all.pt",
+      "bytes": 829075124,
+      "sha256": "6d44cc780541c286720e715645088b9695bde485ca8861516ea4ab6096040749",
+      "restore_path": "results/idft_cx40_lm4_noaug_all.pt"
+    },
+    {
+      "name": "idft_cx38_selected.pt",
+      "bytes": 828255519,
+      "sha256": "8614b9c681ab8fb5986f7de79224c6ff7dc37f805800c9b7147438d6702d8e08",
+      "restore_path": "results/idft_cx38_selected.pt"
+    },
+    {
+      "name": "task1-weights-1117.tar.gz.part000",
+      "bytes": 1500000000,
+      "sha256": "b792c5a91d0605115e1f8932fa11a09405e2ed55e63a07b6cdb1bf4ad534e5ca",
+      "archive_group": "parent",
+      "archive_format": "concatenated gzip tar"
+    },
+    {
+      "name": "task1-weights-1117.tar.gz.part001",
+      "bytes": 1500000000,
+      "sha256": "7c22a3b7b7f64ed609f002712512c7682ff3d963d0609a8c0ea339602147283c",
+      "archive_group": "parent",
+      "archive_format": "concatenated gzip tar"
+    },
+    {
+      "name": "task1-weights-1117.tar.gz.part002",
+      "bytes": 1500000000,
+      "sha256": "421ef15fbeb398cf7baf4bb766894b0b274ad26bc03a73da3c1aab3931c0796f",
+      "archive_group": "parent",
+      "archive_format": "concatenated gzip tar"
+    },
+    {
+      "name": "task1-weights-1117.tar.gz.part003",
+      "bytes": 1500000000,
+      "sha256": "3fb4d72e3198783b974dde88ed075a44a377f73be4af8efb850e2f1e5cd0d0bc",
+      "archive_group": "parent",
+      "archive_format": "concatenated gzip tar"
+    },
+    {
+      "name": "task1-weights-1117.tar.gz.part004",
+      "bytes": 1500000000,
+      "sha256": "46bbe5f864b32273dd3f8ee49d3b2aa0846b8412cbe9b130249fd82d3607df6e",
+      "archive_group": "parent",
+      "archive_format": "concatenated gzip tar"
+    },
+    {
+      "name": "task1-weights-1117.tar.gz.part005",
+      "bytes": 1500000000,
+      "sha256": "d1ba03bc006d3a8002826d1f2405cd3870c218bf1e33cf245b3a79fd3865887a",
+      "archive_group": "parent",
+      "archive_format": "concatenated gzip tar"
+    },
+    {
+      "name": "task1-weights-1117.tar.gz.part006",
+      "bytes": 1500000000,
+      "sha256": "30e86e95e91335de88ff1c1c01792fb5f3138075d63b544e0b6a1ec17dafc8eb",
+      "archive_group": "parent",
+      "archive_format": "concatenated gzip tar"
+    },
+    {
+      "name": "task1-weights-1117.tar.gz.part007",
+      "bytes": 1500000000,
+      "sha256": "4413630a8a0796d669d55fb82d21001a7847439e5c267a1efaf905b63b65e96d",
+      "archive_group": "parent",
+      "archive_format": "concatenated gzip tar"
+    },
+    {
+      "name": "task1-weights-1117.tar.gz.part008",
+      "bytes": 1500000000,
+      "sha256": "85166cd7c125222ca9486e46299c4e2e437dca12a35607f4ba07150b7ca3bef8",
+      "archive_group": "parent",
+      "archive_format": "concatenated gzip tar"
+    },
+    {
+      "name": "task1-weights-1117.tar.gz.part009",
+      "bytes": 1500000000,
+      "sha256": "78a6e28be9b4e063c53a88cded4ba77816f06838d7fa96b0470366f5fdd1fa41",
+      "archive_group": "parent",
+      "archive_format": "concatenated gzip tar"
+    },
+    {
+      "name": "task1-weights-1117.tar.gz.part010",
+      "bytes": 1500000000,
+      "sha256": "1d5a1206da0dee0d27e16228afbc2ab94ef741cdc7edff3ae125fbdce9c48e99",
+      "archive_group": "parent",
+      "archive_format": "concatenated gzip tar"
+    },
+    {
+      "name": "task1-weights-1117.tar.gz.part011",
+      "bytes": 1500000000,
+      "sha256": "0f7a5e7188fe3e5f72e0c4d857cf066101cfb118a481bf1cd1aecdb4d2c02c68",
+      "archive_group": "parent",
+      "archive_format": "concatenated gzip tar"
+    },
+    {
+      "name": "task1-weights-1117.tar.gz.part012",
+      "bytes": 1500000000,
+      "sha256": "48d818bc198d2551bebff16ba1a81d97904d01fab45791851ce6b730065633fd",
+      "archive_group": "parent",
+      "archive_format": "concatenated gzip tar"
+    },
+    {
+      "name": "task1-weights-1117.tar.gz.part013",
+      "bytes": 1500000000,
+      "sha256": "7965d2d951eb4108b08c3ab021f9bcf86582c060b8cd88ca089410c2c6d09c2c",
+      "archive_group": "parent",
+      "archive_format": "concatenated gzip tar"
+    },
+    {
+      "name": "task1-weights-1117.tar.gz.part014",
+      "bytes": 1500000000,
+      "sha256": "17de5959f7f44dc7b7b3055c7816b0f3ab82ce314250a2c816b303ac9001095e",
+      "archive_group": "parent",
+      "archive_format": "concatenated gzip tar"
+    },
+    {
+      "name": "task1-weights-1117.tar.gz.part015",
+      "bytes": 655895951,
+      "sha256": "6dfbbd395f24f131bfac2b0bcb6404b22a121a8ad3261215bb30707eacb993d9",
+      "archive_group": "parent",
+      "archive_format": "concatenated gzip tar"
+    },
+    {
+      "name": "idft_cx35_lm6.pt",
+      "bytes": 1600521998,
+      "sha256": "e1805155302f04625da24a392a48aef734cc1f11cffc0e83c88390baf84b7467",
+      "restore_path": "results/idft_cx35_lm6.pt"
+    },
+    {
+      "name": "go18_gate_weights.tar.part000",
+      "bytes": 1500000000,
+      "sha256": "2f32a378244a4e054536eb30f4e483604726c47d74d40c984e8f4b6ff1a8c2cf",
+      "archive_group": "gate",
+      "archive_format": "concatenated uncompressed tar"
+    },
+    {
+      "name": "go18_gate_weights.tar.part001",
+      "bytes": 1500000000,
+      "sha256": "03b3d012ffd92728e744ef932d0146d1dedbfb6fb023ca633480c4a81f09b19e",
+      "archive_group": "gate",
+      "archive_format": "concatenated uncompressed tar"
+    },
+    {
+      "name": "go18_gate_weights.tar.part002",
+      "bytes": 1500000000,
+      "sha256": "67a9582bfc95c43e64bde687af7c1c597ebf1b3f8128faf8c355b3461eb2cca8",
+      "archive_group": "gate",
+      "archive_format": "concatenated uncompressed tar"
+    },
+    {
+      "name": "go18_gate_weights.tar.part003",
+      "bytes": 597011200,
+      "sha256": "ddc607d7f6015e315f73076b22bb1fba76728c926c7fad33169f2e1eef478219",
+      "archive_group": "gate",
+      "archive_format": "concatenated uncompressed tar"
+    },
+    {
+      "name": "policy_metric.pt",
+      "bytes": 1428356,
+      "sha256": "3574aa6d4ddf296559f7ec901308df2935d29afc3db1ea4e9da524ce1cd836cc",
+      "restore_path": "reproduction/policy_metric1119/policy_metric.pt"
+    },
+    {
+      "name": "policy_lda.npz",
+      "bytes": 229104,
+      "sha256": "4c4abe43ef6c9e6b2b0266ada4a7fee267592a137057339506ac9cedd5a96312",
+      "restore_path": "reproduction/policy_expanded_lda1122/policy_lda.npz"
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 # AI CUP 2026 Go Task 1
 
-Competition source and configuration for TEAM_10990. This repository contains no author contact table, portal credentials, organizer raw datasets or trained checkpoint bytes.
+Competition source and configuration for TEAM_10990. This repository contains no author contact table, portal credentials, organizer raw datasets. Trained checkpoint downloads are being published in the public release linked below.
 
 ## Result
 
@@ -22,7 +22,9 @@ Accepted prediction: public score **0.8721950**; private score **0.8855415**, ra
 
 The archived compact replay was verified byte-for-byte from frozen coordinate scores and extracted policy features, with inherited original-family predictions. **This is not a passing full raw-CSV reconstruction.** The inherited legacy base view still changes some lower-ranked candidates when regenerated; a separately evaluated reconstruction scored 0.8670060. The documentation preserves this unresolved difference. Training from random seeds is not claimed to reproduce checkpoint bytes.
 
-Large trained artifacts and frozen features remain in the existing private releases listed in `references/model_release_index.json`; public source access does not imply public asset access. The organizer must receive authorized access to those assets separately. Do not represent a private download URL as reviewer-accessible until access has been arranged.
+## Public model weights
+
+Download without logging in: [trained-weights-20261127](https://github.com/goog-msft-fb-nflx-nvda-aapl/aicup2026-go-task1/releases/tag/trained-weights-20261127). Publication is in progress. `config/public_weights.json` lists every expected asset and checksum; `tools/download_weights.py` refuses to report success if any are missing. Training is not needed when using these fitted weights. The full original-test-data inference acceptance test remains unresolved; public availability alone is not proof of a passing prediction test.
 
 ## Running
 

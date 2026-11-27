@@ -10,6 +10,7 @@ PROJECT_ROOT/
   scripts/                       copy code/scripts/*.sh here if using historical stage scripts
   data/training/train_A.csv ... train_D.csv
   data/training/train_1D.csv ... train_6D.csv
+  data/tests1v2/tests/sample_submission_player_v2.csv
   data/tests1v2/tests/player_identification_candidates_public.csv
   data/tests1v2/tests/player_identification_candidates_private.csv
   data/tests1v2/tests/player_identification_test_public.csv
@@ -30,6 +31,16 @@ Check official CSVs with the supplied inventory (it records names/checksums, not
 python tools/check_official_data.py --root "$PROJECT_ROOT" \
   --inventory config/official_input_hashes.json
 ```
+
+For inference, add `--tests-only` to the checker; the ten training CSVs are required only for training. No retraining is required to use the published weights.
+
+## Public weight download (publication in progress)
+
+```bash
+python tools/download_weights.py --directory /absolute/path/to/downloads
+```
+
+This uses anonymous HTTPS only, verifies all expected SHA256 values, and fails if any required asset is not yet published. See `config/public_weights.json` for archive grouping and restore paths. Do not run training to compensate for a missing published checkpoint. The original-data inference acceptance test is not yet passing.
 
 ## 2 Exact saved-model replay already verified
 
