@@ -35,8 +35,8 @@ for tg,cf,qf in (('pub2','candidates2_public','test2_public'),('priv2','candidat
     pids=sorted(byp);order=[r for p in pids for r in byp[p]];own=np.array([i for i,p in enumerate(pids) for _ in byp[p]])
     E=embed([r['sgf_content'] for r in order],[r['color'] for r in order]);P=nrm(np.stack([E[own==i].mean(0) for i in range(len(pids))]))
     assert (np.load(D+f'results/S_{tg}_pids.npy')==np.array(pids)).all() or True
-    qs=list(csv.DictReader(open(T+f'player_identification_{qf}.csv')));S=[];print(tg,len(pids),len(order),len(qs),flush=True)
+    qs=list(csv.DictReader(open(T+f'player_identification_{qf}.csv')));S=[];Q=[];print(tg,len(pids),len(order),len(qs),flush=True)
     for r in qs:
-        n=int(r['num_games']);Eq=embed([r[f'sgf_{i}'] for i in range(1,n+1)],[r[f'color_{i}'] for i in range(1,n+1)]);S.append(nrm(Eq.mean(0))@P.T)
-    np.save(D+f'results/Sidft_{tag}_{tg}.npy',np.array(S,np.float32))
+        n=int(r['num_games']);Eq=embed([r[f'sgf_{i}'] for i in range(1,n+1)],[r[f'color_{i}'] for i in range(1,n+1)]);Q.append(nrm(Eq.mean(0)));S.append(Q[-1]@P.T)
+    np.save(D+f'results/Sidft_{tag}_{tg}.npy',np.array(S,np.float32));np.save(D+f'results/Qemb_{tag}_{tg}.npy',np.array(Q,np.float32))
 print('DONE')

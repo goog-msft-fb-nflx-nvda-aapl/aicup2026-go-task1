@@ -19,6 +19,7 @@ from gocommon import parse
 parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument('--root', type=Path, required=True)
 parser.add_argument('--pool', choices=['pub2', 'priv2'], required=True)
+parser.add_argument('--smoke', action='store_true', help='Process only two games; never write production feature files')
 a = parser.parse_args()
 root = a.root.resolve()
 output = root / 'reproduction/policy_test1119'
@@ -62,9 +63,10 @@ counts = np.zeros(len(records), dtype=np.int32)
 errors = {}
 started = time.time()
 with mp.Pool(12, initializer=initialize_worker) as pool:
-    for start in range(0, len(records), 32):
+    limit = 2 if a.smoke else len(records)
+    for start in range(0, limit, 32):
         tasks = []
-        for sgf, target in records[start:start + 32]:
+        for sgf, target in records[start:min(start + 32, limit)]:
             handicap, moves = parse(sgf)
             tasks.append((moves[:200], handicap, target, 200, 48, model.config))
         replayed = pool.map(replay_game, tasks)
@@ -100,6 +102,10 @@ with mp.Pool(12, initializer=initialize_worker) as pool:
             offset += count
         if start % 640 == 0:
             print(a.pool, start + len(replayed), len(records), 'seconds', round(time.time() - started), 'excluded', errors, flush=True)
+if a.smoke:
+    assert (counts[:2] > 0).all() and np.isfinite(features[:2]).all()
+    print(json.dumps({'smoke_passed': True, 'games': 2, 'width': width, 'counts': counts[:2].tolist(), 'production_features_written': False}), flush=True)
+    raise SystemExit(0)
 np.savez_compressed(output / f'{a.pool}_features.npz', features=features, counts=counts,
                     player_ids=np.array(players), question_ids=np.array([row['question_id'] for row in questions]),
                     query_indices=np.array(query_indices))

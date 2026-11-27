@@ -1,0 +1,7 @@
+# Saved-weight inference only, Python 3.11.17. Install CUDA PyTorch first as in REPRODUCE.md.
+numpy==2.3.5
+scipy==1.17.1
+scikit-learn==1.9.0
+joblib==1.6.0
+packaging==26.3
+torch==2.6.0

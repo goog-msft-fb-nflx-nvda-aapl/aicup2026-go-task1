@@ -1,4 +1,4 @@
-> Current organizer instructions: [REPRODUCE.md](../REPRODUCE.md), version reproduction-20261127. All experiment-specific guides below are historical; their former private access arrangements are superseded by the public weight manifest.
+> Current organizer instructions: [REPRODUCE.md](../REPRODUCE.md), version inference-20261127. All experiment-specific guides below are historical; their former private access arrangements are superseded by the public weight manifest.
 
 # Frozen upstream references
 

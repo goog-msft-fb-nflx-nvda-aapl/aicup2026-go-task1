@@ -13,7 +13,9 @@ Accepted prediction: public score **0.8721950**; private score **0.8855415**, ra
 - `code/src/codex_policy_residual_pilot_1119.py`, `codex_policy_test_features_1119.py`: frozen HumanSL residual extraction.
 - `code/src/codex_policy_metric1119.py`: learned identity embedding.
 - `code/src/codex_policy_expand1122.py`, `codex_policy_expand_fit1122.py`: expanded feature extraction and LDA/Gaussian fitting.
-- `code/src/codex_reproduce_best1123.py`: accepted saved-intermediate replay.
+- `tools/infer.py`: complete original-test-data inference orchestration and resumable stage control.
+- `code/src/inference_final_fusion.py`: accepted fusion without historical prediction-row inputs.
+- `code/src/codex_reproduce_best1123.py`: historical saved-intermediate replay only.
 - `config/`: exact selected hyperparameters, checkpoint argument records and input/code hashes.
 - `REPRODUCE.md`: dataset layout, commands, expected outputs and verification scope.
 - `requirements/`: recorded environment stacks; `licenses/` and `EXTERNAL_RESOURCES.md`: attribution.
@@ -28,7 +30,15 @@ Download without logging in: [trained-weights-20261127](https://github.com/goog-
 
 ## Running
 
-Use [REPRODUCE.md](REPRODUCE.md), version `reproduction-20261127`, and the shared command/model contract in `config/reproduction_contract.json`. The report's reproduction section is mirrored in `REPORT_REPRODUCTION.md`. Download and restore fitted models with `tools/download_weights.py` and `tools/restore_weights.py`; training is not required. Official CSV placement and partial component commands are listed in that guide. A complete exact original-data inference command is not yet certified. Historical training and saved-output replay instructions are clearly separated under `references/`.
+Use [REPRODUCE.md](REPRODUCE.md), version `inference-20261127`, and its report-shared contract `config/reproduction_contract.json`. After anonymous weight restoration, pinned HumanSL setup and official test CSV placement, run:
+
+```bash
+python tools/infer.py --root "$GO_ROOT" --gpu 0
+```
+
+This complete 41-stage pipeline uses 66 saved model files, performs no training and reads no historical prediction CSV, feature cache or score archive. It writes `sub/g23_greplace.csv` and succeeds only if the accepted CSV SHA256 matches. **The complete official-data run is not yet verified** because the local test CSVs are missing and the historical legacy-view discrepancy needs checking. Genuine cached-intermediate regression matched all 800 updated-pool rows; real-model synthetic GPU checks passed. These limited checks are not a passing official-data inference run.
+
+Use `--plan` without data to inspect all stages, and `--resume` to monitor/reuse only recorded verified stages. The current inference source inventory is `config/inference_source_manifest.json`; `config/code_manifest.json` is the historical source provenance. The report's reproduction section is mirrored in `REPORT_REPRODUCTION.md`.
 
 ## Attribution and assistance
 

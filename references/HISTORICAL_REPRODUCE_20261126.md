@@ -1,6 +1,6 @@
 # Historical training and replay records
 
-These records are retained for provenance, not as current saved-weight inference instructions. Use [REPRODUCE.md](../REPRODUCE.md), version reproduction-20261127, for public model downloads, parent-model restoration, dataset placement, commands and verification limits.
+These records are retained for provenance, not as current saved-weight inference instructions. Use [REPRODUCE.md](../REPRODUCE.md), version inference-20261127, for public model downloads, parent-model restoration, dataset placement, commands and verification limits.
 
 ## Training history
 

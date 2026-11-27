@@ -1,6 +1,6 @@
 {
-  "version": "reproduction-20261127",
-  "code_url": "https://github.com/goog-msft-fb-nflx-nvda-aapl/aicup2026-go-task1/tree/reproduction-20261127",
+  "version": "inference-20261127",
+  "code_url": "https://github.com/goog-msft-fb-nflx-nvda-aapl/aicup2026-go-task1/tree/inference-20261127",
   "weights_url": "https://github.com/goog-msft-fb-nflx-nvda-aapl/aicup2026-go-task1/releases/tag/trained-weights-20261127",
   "weights_manifest": "config/public_weights.json",
   "retraining_required": false,
@@ -8,18 +8,21 @@
   "katago_commit": "d91ea855110dae533f0aada947b2b7d78cc8a4e1",
   "accepted_cx40_sha256": "6d44cc780541c286720e715645088b9695bde485ca8861516ea4ab6096040749",
   "accepted_csv_sha256": "eac2f9120aff4dd74102d08b2cbcc3e2cf9009d976fd80a63890b371deacde26",
-  "raw_inference_status": "not_certified",
+  "raw_inference_status": "implemented_not_validated_on_official_test_data",
   "known_blockers": [
-    "Official test CSVs unavailable locally; AIdea download period has ended.",
-    "Accepted raw-data orchestration remains incomplete; historical component scripts require intermediate inputs and legacy-view reconstruction differs."
+    "Official test CSVs are unavailable locally; the complete new pipeline has not been run on the official test data.",
+    "An earlier legacy base-view reconstruction differed; the new runner reports failure if the accepted checksum differs."
   ],
   "commands": {
     "check_public": "python tools/download_weights.py --check-public",
     "download": "python tools/download_weights.py --directory \"$DOWNLOADS\"",
     "restore": "python tools/restore_weights.py --directory \"$DOWNLOADS\" --root \"$GO_ROOT\"",
     "check_tests": "python tools/check_official_data.py --root \"$GO_ROOT\" --inventory config/official_input_hashes.json --tests-only",
-    "cx40_component": "CUDA_VISIBLE_DEVICES=0 python \"$GO_ROOT/src/codex_infer_ablation_1118.py\" --root \"$GO_ROOT\" --tag cx40_lm4_noaug_all",
-    "policy_public": "CUDA_VISIBLE_DEVICES=0 python \"$GO_ROOT/src/codex_policy_test_features_1119.py\" --root \"$GO_ROOT\" --pool pub2",
-    "policy_private": "CUDA_VISIBLE_DEVICES=0 python \"$GO_ROOT/src/codex_policy_test_features_1119.py\" --root \"$GO_ROOT\" --pool priv2"
-  }
+    "preflight": "python tools/infer.py --root \"$GO_ROOT\" --gpu 0 --preflight-only",
+    "inference": "python tools/infer.py --root \"$GO_ROOT\" --gpu 0",
+    "resume": "python tools/infer.py --root \"$GO_ROOT\" --gpu 0 --resume",
+    "plan": "python tools/infer.py --root \"$GO_ROOT\" --plan"
+  },
+  "inference_stages": 41,
+  "required_model_files": 66
 }

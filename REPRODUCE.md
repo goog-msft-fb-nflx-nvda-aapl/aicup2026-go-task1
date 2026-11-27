@@ -1,27 +1,28 @@
 # Task 1 saved-weight inference instructions
 
-Version: `reproduction-20261127`. The report and this guide share `config/reproduction_contract.json`.
+Version: `inference-20261127`. The report and this guide share `config/reproduction_contract.json`.
 
 ## Current status
 
 All 27 model/archive/license downloads are public. No retraining is required. This includes the fine-tuned identity models, parent language models (LM1–LM6), fitted SVD/IDF and MLP transforms, rank models, HumanSL, policy MLP and fitted LDA.
 
-**A complete original-CSV → accepted-CSV run has not passed.** The original test data are currently unavailable locally; historical parent orchestration also needs completion and the documented legacy-view prediction discrepancy needs resolution. The component commands below do not certify the complete prediction. The previously verified saved-feature/score replay is a different test.
+**The complete inference command is implemented; official-data exactness is not yet validated.** It runs 41 stages using 66 restored model files, starting from the nine official test CSVs. No training, historical prediction CSV, saved feature cache or archived score matrix is an inference input. The runner generates all features/scores within its fresh workspace and accepts success only when the final CSV matches the accepted SHA256. The local official test files are unavailable; an earlier legacy reconstruction difference remains to be checked when they are restored.
 
 ## 1 Code and environment
 
 ```bash
-git clone --branch reproduction-20261127 https://github.com/goog-msft-fb-nflx-nvda-aapl/aicup2026-go-task1.git
+git clone --branch inference-20261127 https://github.com/goog-msft-fb-nflx-nvda-aapl/aicup2026-go-task1.git
 cd aicup2026-go-task1
 python3.11 -m venv .venv
 . .venv/bin/activate
-python -m pip install -r requirements/requirements-training-recorded.txt
+python -m pip install torch==2.6.0 --index-url https://download.pytorch.org/whl/cu124
+python -m pip install -r requirements/requirements-inference.txt
 export GO_ROOT=/absolute/path/to/new-go-inference
 export DOWNLOADS=/absolute/path/to/weight-downloads
 export PYTHONHASHSEED=0
 ```
 
-The environment file records the original versions; the name does not mean training must run. Fresh installation of this exact full inference environment has not been independently verified. Use a CUDA GPU and run a real tensor-operation smoke test before model inference.
+The inference requirements omit training-only and verifier-only dependencies. Training must not run. Fresh installation of this exact full inference environment has not been independently verified. Use a CUDA GPU and run a real tensor-operation smoke test before model inference.
 
 ## 2 Anonymous weight download and restoration
 
@@ -69,17 +70,50 @@ export PYTHONPATH="$GO_ROOT/src:$GO_ROOT/katago/kgsrc/python"
 
 HumanSL network and its license are restored under `$GO_ROOT/katago/` in step 2. Identity component scripts also load parent LM checkpoints for architecture settings, even though inference uses fine-tuned identity weights. Keep those parent models.
 
-## 5 Component inference commands
+## 5 Complete inference
 
-These commands extract the cx40 component and the two HumanSL test-feature pools from original CSVs. They are **partial inference**, not a complete accepted-submission runner. Run in a clean workspace. The training/fitting scripts are not part of these steps.
+From the cloned repository, after steps 1–4:
 
 ```bash
-CUDA_VISIBLE_DEVICES=0 python "$GO_ROOT/src/codex_infer_ablation_1118.py" --root "$GO_ROOT" --tag cx40_lm4_noaug_all
-CUDA_VISIBLE_DEVICES=0 python "$GO_ROOT/src/codex_policy_test_features_1119.py" --root "$GO_ROOT" --pool pub2
-CUDA_VISIBLE_DEVICES=0 python "$GO_ROOT/src/codex_policy_test_features_1119.py" --root "$GO_ROOT" --pool priv2
+python tools/infer.py --root "$GO_ROOT" --gpu 0 --preflight-only
+python tools/infer.py --root "$GO_ROOT" --gpu 0
 ```
 
-The accepted updated-pool fusion is `z(cx40 coordinate fusion) + 0.25*z(policy MLP cosine) + 0.10*z(expanded Gaussian)`. Original-pool predictions follow the frozen parent pipeline. The 34 parent members, 76 weighted entries and cx40 increment of weight 3 are recorded in `config/coordinate_fusion.json`; model arguments are in `config/parent_checkpoint_configs.json` and `config/gate_checkpoint_configs.json`.
+`--gpu 0` chooses physical GPU 0; change it to one available GPU. Do not run on a busy shared GPU without allocation. The preflight checks all nine official test files, all 66 model paths, standalone model hashes, the pinned KataGo source and a real CUDA tensor operation. It records input/model/source hashes and environment details. A fresh model workspace must contain no previously generated `.npy` scores, policy feature cache or prediction CSV.
+
+The 41 stages generate:
+
+1. The four legacy base-score matrices from SGFs, frozen SVD/IDF, base LMs and MLPs.
+2. Original-pool rank signals from ft4/ft5 and updated-pool rank signals from ft6–ft9.
+3. The 34 parent identity members plus selected cx40; original graph query embeddings are generated in the same pass. Legacy members use four symmetries; cx38/cx40 respect checkpoint augmentation settings, including cx40's one orientation.
+4. HumanSL residual features for both updated pools from actual board replay.
+5. Original-pool fusion from the 64 original weighted entries; updated fusion from the 76 parent entries plus cx40 three times, with rank gating, candidate correction and query graph. The final updated score adds `.25*z(policy MLP cosine) + .10*z(expanded Gaussian)` to the standardized coordinate score. No LambdaRank verifier or verifier fitting is needed.
+6. All 1,600 top-five rows in the official sample order, without inheriting prediction rows from an earlier CSV.
+
+Output:
+
+```text
+$GO_ROOT/sub/g23_greplace.csv
+$GO_ROOT/sub/prediction_verification.json
+$GO_ROOT/logs/<stage>.log
+$GO_ROOT/inference/<stage>.receipt.json
+```
+
+A nonmatching CSV is retained for diagnosis, but the command exits with failure; it never reports success merely because a file exists. Success prints `EXACT_ACCEPTED_CSV_REPRODUCED` only after re-reading and hashing the actual output file.
+
+For a disconnected/interrupted controller with unchanged code, data, models, GPU and output path:
+
+```bash
+python tools/infer.py --root "$GO_ROOT" --gpu 0 --resume
+```
+
+The runner monitors confirmed live stages, excludes duplicate workers with locks, and reuses only recorded outputs whose hashes still match. It does not blindly retry failed/uncertain stages. Inspect their logs and receipts first; a changed implementation requires a fresh run workspace.
+
+To inspect the entire command plan without data, models, Torch or a GPU:
+
+```bash
+python tools/infer.py --root "$GO_ROOT" --plan
+```
 
 ## 6 Acceptance criteria and unresolved work
 
@@ -89,6 +123,20 @@ The final prediction must contain 1,600 questions and five unique candidate IDs 
 eac2f9120aff4dd74102d08b2cbcc3e2cf9009d976fd80a63890b371deacde26
 ```
 
-There is currently no certified single command for original-data inference to this exact file. `code/src/codex_reproduce_best1123.py` requires saved coordinate scores, policy features and a parent CSV; it is a replay/fusion runner. Historical parent wrappers also reference configurations and verifier inputs not covered by this restoration procedure. These scripts must not be described as a complete clean inference pipeline. Raw test data alone will not resolve those orchestration and numerical differences automatically.
+The complete command above is implemented, but the official-data checksum run has not been executed because the local test CSVs are missing. An earlier legacy base-view reconstruction differed; implementation completeness must not be described as proof of exact output. `code/src/codex_reproduce_best1123.py` remains a separate historical replay/fusion runner and is not called by the new pipeline.
+
+Checks already performed on the new implementation:
+
+- Pure coordinate fusion is bit-identical to historical gate scripts on synthetic original/updated pools.
+- Against genuine retained intermediate arrays, updated coordinate matrices are bit-identical and all 800 updated-pool top-five predictions match the accepted submission. This is an intermediate regression, not raw-data inference.
+- Selected epoch-2 cx40 and frozen HumanSL each passed real-GPU forward checks on explicitly synthetic legal SGFs. HumanSL produced 432 channels; its smoke mode writes no production feature file.
+- Persistent worker tests verified duplicate exclusion, completion receipts, output hashes and failure when an expected output is missing.
+
+Optional data-free regression checks after installing the inference dependencies:
+
+```bash
+python tests/check_fusion_against_reference.py
+python tests/check_stage_controller.py
+```
 
 Historical training/replay commands are preserved separately in `references/HISTORICAL_REPRODUCE_20261126.md`. They describe provenance and previous tests, not an alternative promise of exact raw inference.

@@ -1,0 +1,26 @@
+{
+  "scope": "synthetic reference comparison and historical cached-intermediate regression; NOT raw-data inference",
+  "synthetic_coordinate_gate_differential": "all four pools bit-identical to historical scripts",
+  "cached_intermediate_regression": {
+    "pub2": {
+      "coordinate_matrix": "bit-identical to archived cx40 fusion",
+      "accepted_top5_rows_matched": 400
+    },
+    "priv2": {
+      "coordinate_matrix": "bit-identical to archived cx40 fusion",
+      "accepted_top5_rows_matched": 400
+    }
+  },
+  "real_weight_synthetic_gpu_smoke": "passed accepted epoch2 cx40 on two synthetic game records; not official inference",
+  "complete_inference_stages": 41,
+  "required_model_files": 66,
+  "controller_checks": "duplicate exclusion, completion receipts, output hashes, missing-output failure passed",
+  "humansl_synthetic_gpu_smoke": {
+    "passed": true,
+    "games": 2,
+    "feature_channels": 432,
+    "production_features_written": false
+  },
+  "raw_official_test_inference": "not executed; official test CSVs missing locally",
+  "independent_source_review": "No unresolved blocking source issue found; this is not a raw inference acceptance test"
+}
