@@ -1,6 +1,6 @@
 # AI CUP 2026 Go Task 1
 
-Competition source and configuration for TEAM_10990. This repository contains no author contact table, portal credentials, organizer raw datasets. Trained checkpoint downloads are being published in the public release linked below.
+Competition source and configuration for TEAM_10990. This repository contains no author contact table, portal credentials, organizer raw datasets. Trained checkpoints are publicly downloadable from the release linked below.
 
 ## Result
 
@@ -24,7 +24,7 @@ The archived compact replay was verified byte-for-byte from frozen coordinate sc
 
 ## Public model weights
 
-Download without logging in: [trained-weights-20261127](https://github.com/goog-msft-fb-nflx-nvda-aapl/aicup2026-go-task1/releases/tag/trained-weights-20261127). Publication is in progress. `config/public_weights.json` lists every expected asset and checksum; `tools/download_weights.py` refuses to report success if any are missing. Training is not needed when using these fitted weights. The full original-test-data inference acceptance test remains unresolved; public availability alone is not proof of a passing prediction test.
+Download without logging in: [trained-weights-20261127](https://github.com/goog-msft-fb-nflx-nvda-aapl/aicup2026-go-task1/releases/tag/trained-weights-20261127). All 27 expected files are public; their sizes and SHA256 values passed anonymous release checks on 27 November 2026. `config/public_weights.json` lists every expected asset and checksum; `tools/download_weights.py` refuses to report success if any are missing. Training is not needed when using these fitted weights. The full original-test-data inference acceptance test remains unresolved; public availability alone is not proof of a passing prediction test.
 
 ## Running
 

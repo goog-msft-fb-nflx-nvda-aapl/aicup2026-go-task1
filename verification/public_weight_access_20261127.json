@@ -1,0 +1,38 @@
+{
+  "expected_files": 27,
+  "metadata_sha256_check": "passed anonymously for all 27 files",
+  "actual_anonymous_range_checks": [
+    {
+      "name": "humanv0.ckpt",
+      "http_status": 206,
+      "range": "bytes 0-63/323752318",
+      "anonymous": true
+    },
+    {
+      "name": "task1-weights-1117.tar.gz.part000",
+      "http_status": 206,
+      "range": "bytes 0-63/1500000000",
+      "anonymous": true
+    },
+    {
+      "name": "go18_gate_weights.tar.part000",
+      "http_status": 206,
+      "range": "bytes 0-63/1500000000",
+      "anonymous": true
+    },
+    {
+      "name": "policy_metric.pt",
+      "http_status": 206,
+      "range": "bytes 0-63/1428356",
+      "anonymous": true
+    },
+    {
+      "name": "policy_lda.npz",
+      "http_status": 206,
+      "range": "bytes 0-63/229104",
+      "anonymous": true
+    }
+  ],
+  "accepted_cx40_sha256": "6d44cc780541c286720e715645088b9695bde485ca8861516ea4ab6096040749",
+  "raw_inference_acceptance": "not passed; original test files unavailable; previously recorded legacy-view discrepancy requires resolution"
+}

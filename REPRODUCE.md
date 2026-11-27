@@ -34,7 +34,7 @@ python tools/check_official_data.py --root "$PROJECT_ROOT" \
 
 For inference, add `--tests-only` to the checker; the ten training CSVs are required only for training. No retraining is required to use the published weights.
 
-## Public weight download (publication in progress)
+## Public weight download
 
 ```bash
 python tools/download_weights.py --directory /absolute/path/to/downloads

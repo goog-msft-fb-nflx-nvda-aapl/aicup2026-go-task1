@@ -1,7 +1,7 @@
 {
   "release_url": "https://github.com/goog-msft-fb-nflx-nvda-aapl/aicup2026-go-task1/releases/tag/trained-weights-20261127",
   "download_base": "https://github.com/goog-msft-fb-nflx-nvda-aapl/aicup2026-go-task1/releases/download/trained-weights-20261127/",
-  "publication_status": "in_progress",
+  "publication_status": "complete",
   "assets": [
     {
       "name": "humanv0.ckpt",

@@ -3,6 +3,7 @@ import argparse
 import concurrent.futures
 import hashlib
 import json
+import time
 from pathlib import Path
 import urllib.error
 import urllib.request
@@ -25,7 +26,7 @@ def main():
     args = parser.parse_args()
     manifest = json.loads(args.manifest.read_text())
     api = 'https://api.github.com/repos/goog-msft-fb-nflx-nvda-aapl/aicup2026-go-task1/releases/tags/trained-weights-20261127'
-    request = urllib.request.Request(api, headers={'User-Agent': 'Go-Task1-anonymous-reproduction'})
+    request = urllib.request.Request(api + '?check=' + str(time.time_ns()), headers={'User-Agent': 'Go-Task1-anonymous-reproduction', 'Cache-Control': 'no-cache'})
     with urllib.request.urlopen(request, timeout=60) as response:
         published = {a['name']: a for a in json.load(response)['assets']}
     errors = []
